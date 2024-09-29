@@ -2,18 +2,20 @@
 
 void mergeSort(int a[], int n);
 void merge(int arr[], int si, int mid, int ei);
+void printArray(int arr[], int n);
 
 int main(){
     int arr[] = {4, 6, 2, 5, 7, 9, 1, 3};
 
     int len = sizeof(arr)/sizeof(arr[0]);
 
+    printf("Original array:\n");
+    printArray(arr, len);
+
     mergeSort(arr, len-1);
 
-    for (int i = 0; i < len; i++){
-        printf("%d ", arr[i]);
-    }
-    
+    printf("Sorted array:\n");
+    printArray(arr, len);
     return 0;
 }
 
@@ -60,4 +62,10 @@ void merge(int arr[], int si, int mid, int ei){
     for (k = 0, i = si; k < ei - si + 1; k++, i++) {
     arr[i] = temp[k];
     }
+}
+
+void printArray(int arr[], int n) {
+    for (int i = 0; i < n; i++)
+        printf("%d ", arr[i]);
+    printf("\n");
 }

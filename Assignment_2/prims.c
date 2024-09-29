@@ -1,15 +1,6 @@
 #include <stdio.h>
 #include <limits.h>
-
 #define N 100
-
-/*
-Algo
-
-1. find the min node neighbour set mst[u] = true
-2. check if it is visited and less than key[v]
-    if yes then change parent[v] and key[v]
-*/
 
 int minKey(int key[], int mst[], int vertices) {
     int min = INT_MAX, minIndex;
