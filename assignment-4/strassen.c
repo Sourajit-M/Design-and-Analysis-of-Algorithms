@@ -2,25 +2,25 @@
 
 #define MAX 4
 
-void addMatrix(int A[MAX][MAX], int B[MAX][MAX], int C[MAX][MAX], int size) {
-    for (int i = 0; i < size; i++)
-        for (int j = 0; j < size; j++)
+void addMatrix(int A[MAX][MAX], int B[MAX][MAX], int C[MAX][MAX], int n) {
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
             C[i][j] = A[i][j] + B[i][j];
 }
 
-void subtractMatrix(int A[MAX][MAX], int B[MAX][MAX], int C[MAX][MAX], int size) {
-    for (int i = 0; i < size; i++)
-        for (int j = 0; j < size; j++)
+void subtractMatrix(int A[MAX][MAX], int B[MAX][MAX], int C[MAX][MAX], int n) {
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
             C[i][j] = A[i][j] - B[i][j];
 }
 
-void strassen(int A[MAX][MAX], int B[MAX][MAX], int C[MAX][MAX], int size) {
-    if (size == 1) {
+void strassen(int A[MAX][MAX], int B[MAX][MAX], int C[MAX][MAX], int n) {
+    if (n == 1) {
         C[0][0] = A[0][0] * B[0][0];
         return;
     }
 
-    int mid = size / 2;
+    int mid = n / 2;
     int A11[MAX][MAX], A12[MAX][MAX], A21[MAX][MAX], A22[MAX][MAX];
     int B11[MAX][MAX], B12[MAX][MAX], B21[MAX][MAX], B22[MAX][MAX];
     int M1[MAX][MAX], M2[MAX][MAX], M3[MAX][MAX], M4[MAX][MAX];
@@ -91,12 +91,12 @@ void strassen(int A[MAX][MAX], int B[MAX][MAX], int C[MAX][MAX], int size) {
 int main() {
     int A[MAX][MAX], B[MAX][MAX], C[MAX][MAX] = {0};
 
-    printf("Enter elements of matrix A (4x4):\n");
+    printf("Enter elements of matrix A:\n");
     for (int i = 0; i < MAX; i++)
         for (int j = 0; j < MAX; j++)
             scanf("%d", &A[i][j]);
 
-    printf("Enter elements of matrix B (4x4):\n");
+    printf("Enter elements of matrix B:\n");
     for (int i = 0; i < MAX; i++)
         for (int j = 0; j < MAX; j++)
             scanf("%d", &B[i][j]);
