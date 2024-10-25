@@ -2,7 +2,7 @@
 #define n 6
 
 int queue[100];
-int front = 0, rear = 0;
+int front=0, rear=0;
 
 void push(int num) {
     queue[rear] = num;
@@ -21,7 +21,7 @@ void bfs(int graph[n][n], int vis[]) {
         printf("%d ", curr);
         pop();
         
-        for (int i = 0; i < n; i++) {
+        for (int i=0; i<n; i++) {
             if (graph[curr-1][i]==1 && vis[i]==0) {
                 vis[i] = 1;
                 push(i+1);
