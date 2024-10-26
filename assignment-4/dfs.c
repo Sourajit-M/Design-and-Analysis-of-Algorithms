@@ -1,13 +1,13 @@
 #include <stdio.h>
 #define n 6
 
-void dfs(int graph[n][n], int curr) {
+void dfs(int graph[n][n], int curr, int vis[]) {
     printf("%d ", curr);
     vis[curr-1] = 1;
-x
+
     for (int i=0; i<n; i++){
         if (graph[curr-1][i]==1 && vis[i]==0) {
-            dfs(graph, i+1);
+            dfs(graph, i+1, vis);
         }
     }
 }
@@ -23,6 +23,7 @@ int main() {
     };
     int vis[n] = {0};
     
-    dfs(graph, 1);
+    printf("Depth First Search : \n");
+    dfs(graph, 1, vis);
     return 0;
 }

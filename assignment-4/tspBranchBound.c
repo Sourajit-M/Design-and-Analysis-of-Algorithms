@@ -58,10 +58,10 @@ void tsp(int dist[n][n], int vis[n], int currCost, int bound, int level, int cur
 
 int main() {
     int dist[n][n] = {
-        {0, 3, 6, 7},
-        {3, 0, 2, 5},
-        {6, 2, 0, 4},
-        {7, 5, 4, 0}
+    {0, 10, 15, 20},
+    {10, 0, 35, 25},
+    {15, 35, 0, 30},
+    {20, 25, 30, 0}
     };
 
     int vis[n] = {0};

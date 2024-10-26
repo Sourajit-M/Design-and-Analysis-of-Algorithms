@@ -41,6 +41,7 @@ int main() {
     };
     
     int vis[n] = {0};
+    printf("Bread First Search : \n");
     bfs(graph, vis);
     return 0;
 }
