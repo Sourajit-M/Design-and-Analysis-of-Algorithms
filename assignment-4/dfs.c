@@ -4,7 +4,7 @@
 void dfs(int graph[n][n], int curr) {
     printf("%d ", curr);
     vis[curr-1] = 1;
-
+x
     for (int i=0; i<n; i++){
         if (graph[curr-1][i]==1 && vis[i]==0) {
             dfs(graph, i+1);
