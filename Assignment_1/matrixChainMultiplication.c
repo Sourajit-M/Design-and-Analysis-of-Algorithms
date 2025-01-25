@@ -43,7 +43,7 @@ void matrixChainOrder(int p[], int n) {
 }
 
 int main() {
-    int arr[] = {10, 20, 30, 40, 30};
+    int arr[] = {5, 10, 3, 12, 5, 50, 6};
     int n = sizeof(arr) / sizeof(arr[0]);
 
     matrixChainOrder(arr, n);

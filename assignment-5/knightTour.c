@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#define N 5
+#define N 4
 
 int knightMoves[8][2] = {
     {2, 1}, {1, 2}, {-1, 2}, {-2, 1},

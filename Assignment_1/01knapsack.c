@@ -29,13 +29,13 @@ int knapsack_01(int W, int wt[], int val[], int n) {
 }
 
 int main() {
-    int val[] = {60, 100, 120};  
-    int wt[] = {10, 20, 30};     
-    int W = 60;                  
+    int val[] = {2, 5, 8, 1};  
+    int wt[] = {10, 15, 6, 9};     
+    int W = 30;                  
 
     int n = sizeof(val) / sizeof(val[0]); 
 
-    int max_value = knapsack_012(W, wt, val, n);
+    int max_value = knapsack_014(W, wt, val, n);
     printf("Maximum value in Knapsack = %d\n", max_value);
 
     return 0;

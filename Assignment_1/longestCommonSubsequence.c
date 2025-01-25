@@ -50,8 +50,8 @@ void LCS(char* str1, char* str2) {
 }
 
 int main() {
-    char str1[] = "ABCDGH";
-    char str2[] = "ACDGHR";
+    char str1[] = "PQRSTPQRS”";
+    char str2[] = "PRATPBRQRPS";
     
 
 

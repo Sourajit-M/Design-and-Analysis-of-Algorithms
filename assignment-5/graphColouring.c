@@ -54,7 +54,7 @@ int graphColoring(int graph[V][V], int m){
 }
 
 void display(int color[]){
-    printf("Solution: \n")
+    printf("Solution: \n");
     for(int i=0; i<V; i++){
         printf(" %d ", color[i]);
     }
